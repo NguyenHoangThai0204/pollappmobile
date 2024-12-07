@@ -1,0 +1,42 @@
+/* .usersManagement {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.usersManagement .userManaLeft {
+  height: 80vh;
+  width: 38%;
+  overflow-y: auto;
+}
+.usersManagement .userManaLeft table thead {
+  position: sticky;
+  top: 54px;
+  background-color: white; 
+  z-index: 1; 
+}
+.usersManagement .userManaLeft table thead th {
+  background-color: white; 
+  z-index: 1; 
+}
+.usersManagement .userManaLeft table tbody {
+  overflow-y: auto; 
+}
+.usersManagement .userManaLeft table .trrow:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+.usersManagement .userManaLeft table tbody td {
+  padding: 10px;
+}
+.usersManagement .userManaRight {
+  width: 60%;
+  max-height: 80vh;
+}
+ */
+
+
+ .usersManagement {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}

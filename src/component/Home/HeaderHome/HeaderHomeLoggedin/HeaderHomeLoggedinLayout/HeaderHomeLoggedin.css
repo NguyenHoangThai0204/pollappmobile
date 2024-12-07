@@ -1,0 +1,86 @@
+.wrapper_form_login {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative; /* Giữ định vị để xử lý menu và các phần tử con */
+}
+
+.wrapper_form_login .header__home_name {
+  margin-right: 5px;
+}
+
+.wrapper_form_login .header__home_icon {
+  cursor: pointer;
+  position: relative; /* Định vị để thêm trạng thái chấm tròn */
+}
+
+.wrapper_form_login .header__home_icon img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.wrapper_form_login .header__home_icon .status-indicator {
+  position: absolute;
+  bottom: 2px; /* Điều chỉnh vị trí của chấm tròn */
+  right: 2px;
+  width: 18px; /* Kích thước chấm tròn */
+  height: 18px;
+  background-color: #4caf50; /* Màu xanh lá thể hiện trạng thái hoạt động */
+  border: 2px solid #fff; /* Viền trắng để nổi bật */
+  border-radius: 50%; /* Tạo hình tròn */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng bóng nhẹ */
+}
+
+.wrapper_form_login .overlay {
+  position: fixed;
+  top: 55px;
+  right: 0;
+  margin-right: 100px;
+  width: 100%;
+  height: 100%;
+  padding: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000; /* Đảm bảo overlay nổi trên các thành phần khác */
+}
+
+.wrapper_form_login:hover .menu_layout_logged {
+  display: block; /* Hiển thị menu khi hover */
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper_form_login {
+    flex-direction: column;
+  }
+
+  .wrapper_form_login .header__home_icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .wrapper_form_login .header__home_name {
+    display: none;
+  }
+
+  .wrapper_form_login .overlay {
+    margin-right: 0;
+    padding: 0;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 75px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .wrapper_form_login .header__home_icon img {
+    margin-left: 0;
+  }
+}

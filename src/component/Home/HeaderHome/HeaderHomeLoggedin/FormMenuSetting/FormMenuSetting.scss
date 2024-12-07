@@ -1,0 +1,64 @@
+.menu_layout_setting {
+  width: max-content;
+  padding: 2px;
+  background-color: white;
+  box-shadow: 0 0 20px rgb(161, 159, 159);
+  position: relative;
+  top: 30px;
+  border-radius: 10px;
+  .menu_content {
+    list-style: none;
+    width: max-content;
+    padding: 0;
+
+    // Xóa gạch chân trong các liên kết
+    a {
+      text-decoration: none;
+      display: block; // Đảm bảo Link bao trùm toàn bộ li
+      color: inherit; // Giữ nguyên màu chữ
+
+      li {
+        padding: 8px;
+        margin: 5px;
+        justify-content: space-around;
+        display: flex;
+        .icon{
+          margin-right: 10px;
+          width: 10%;
+        }
+        .name_setting{
+          width: 90%;
+        }
+        &:hover {
+          background-color: rgb(172, 170, 169);
+        }
+      }
+    }
+  }
+}
+
+// Media Query cho màn hình nhỏ hơn
+@media screen and (max-width: 900px) {
+  .wrapper {
+    display: flex;
+    padding: 0;
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .icon_menu {
+      display: inline-block;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .icon_menu.menuClick {
+      background-color: #f1eeee;
+      border-radius: 15px;
+      font-size: 16px;
+    }
+  }
+}

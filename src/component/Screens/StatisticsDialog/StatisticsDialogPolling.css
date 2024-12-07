@@ -1,0 +1,54 @@
+.race-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.track {
+  flex-grow: 1;
+  height: 20px; /* Chiều cao của thanh */
+  background-color: #f0f0f0; /* Màu nền cho thanh */
+  position: relative; /* Cần thiết cho vị trí tuyệt đối của con thú */
+  border-radius: 10px; /* Để làm tròn các góc */
+}
+
+.animal {
+  position: absolute; /* Đặt con thú ở vị trí tuyệt đối */
+  bottom: 0; /* Đặt nó ở dưới cùng của thanh */
+  left: 0; /* Bắt đầu từ bên trái */
+  height: 100%; /* Chiều cao bằng với thanh */
+  display: flex;
+  justify-content: center; /* Căn giữa con thú */
+  align-items: flex-end; /* Căn dưới cùng để con thú không bị che mất */
+  font-size: 30px; /* Kích thước của con thú */
+  transition: width 0.3s ease; /* Hiệu ứng chuyển động cho chiều rộng */
+}
+
+.animal-name {
+  width: 15%;
+  font-size: 18px;
+  margin: 5px 0;
+  white-space: nowrap;        /* Giữ văn bản trên một dòng */
+  overflow: hidden;          /* Ẩn phần văn bản vượt quá chiều rộng */
+  text-overflow: ellipsis;   /* Hiển thị dấu ba chấm khi văn bản bị cắt */
+}
+
+
+/* Thêm hiệu ứng màu cho phần đã qua */
+.track::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #76c7c0; /* Màu cho phần đã qua */
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease; /* Hiệu ứng chuyển động */
+  z-index: 0; /* Đặt xuống dưới cùng */
+}
+
+@media screen and (max-width: 600px) {
+  .animal-name {
+    width: 30%;
+  }
+  
+}

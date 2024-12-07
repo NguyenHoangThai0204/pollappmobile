@@ -1,0 +1,66 @@
+.wrapper_menu {
+  display: flex;
+  width: 100%;
+  padding: auto;
+}
+.wrapper_menu a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  margin-bottom: 5px;
+}
+.wrapper_menu .icon_menu {
+  font-size: 16px;
+  margin: 5px;
+  padding: 10px;
+  height: max-content;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+.wrapper_menu a:hover {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+}
+.wrapper_menu .icon_menu.menuClick {
+  background-color: #f1eeee;
+  border-radius: 15px;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper_menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper_menu a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .wrapper_menu .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .wrapper_menu .menu .icon_menu {
+    display: inline-block;
+    /* margin: 10px; */
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+
+  }
+  .wrapper_menu .menu .icon_menu .icon_menu.menuClick {
+    background-color: #f1eeee;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=MenuLayout.css.map */

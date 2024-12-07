@@ -1,0 +1,69 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.body .wrapperFormLayout {
+  display: flex;
+  width: 55vw;
+  padding: 0;
+  height: 70vh;
+  margin: auto;
+  background: white;
+  background-size: cover;
+  overflow: hidden;
+  position: relative; 
+}
+.body .wrapperFormLayout .content_login_right {
+  width: 50%;
+  position: relative;
+}
+.body .wrapperFormLayout .content_login_right img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: slide 3s infinite; 
+
+}
+.body .wrapperFormLayout .content_login_right img.sliding-image {
+  left: 0;
+}
+
+@keyframes slide {
+  0% {
+    left: 100%;
+  }
+  10% {
+    left: 0;
+  }
+  90% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.body .wrapperFormLayout .content_login_left {
+  width: 50%;
+  display: contents;
+}
+
+@media screen and (max-width: 900px) {
+  .body .wrapperFormLayout {
+    width: 90vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .body .wrapperFormLayout .content_login_right {
+    display: none;
+  }
+  .body .wrapperFormLayout .content_login_left {
+    width: 90%;
+  }
+}

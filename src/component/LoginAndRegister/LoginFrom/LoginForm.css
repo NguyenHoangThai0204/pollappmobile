@@ -1,0 +1,62 @@
+form {
+  background: transparent;
+  width: 23vw;
+  margin: auto;
+  padding: 20px;
+  /* height: 95%; */
+  justify-content: center;
+  backdrop-filter: blur(30px);
+}
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form .form_login {
+  display: grid;
+  width: 100%;
+  margin: 5px;
+}
+form .form_login #standard-basic {
+  font-size: 18px;
+  padding: 2px;
+}
+form .button {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+form .button a {
+  margin: 15px auto;
+}
+form .forgot {
+  text-align: center;
+  margin: 15px 0;
+}
+form .forgot a {
+  text-decoration: none;
+  list-style: none;
+}
+form .signup {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+form .signup p {
+  font-size: 20px;
+}
+@media screen and (max-width: 900px) {
+  form {
+    width: 80%;
+    padding: 20px;
+  }
+  form h1 {
+    font-size: 20px;
+  }
+  form .form_login #standard-basic {
+    font-size: 15px;
+  }
+  form .signup p {
+    font-size: 15px;
+  }
+}
+

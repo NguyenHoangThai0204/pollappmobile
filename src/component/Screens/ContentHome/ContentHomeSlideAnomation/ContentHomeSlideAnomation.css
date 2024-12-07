@@ -1,0 +1,30 @@
+/* ContentHome.css */
+.home_image {
+    width: 100%;
+    margin: auto;
+  }
+  .home_image img {
+    width: 100%; /* Chiều rộng luôn chiếm 100% container */
+    height: auto; /* Tự động giữ tỉ lệ */
+    max-width: 100%; /* Không phóng to hơn kích thước gốc của ảnh */
+    max-height: 350px; /* Giới hạn chiều cao tối đa là 300px */
+    display: block; /* Loại bỏ khoảng trống bên dưới ảnh */
+    object-fit: cover; /* Điều chỉnh ảnh hiển thị đẹp mắt trong container */
+  }
+  
+  .slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: black;
+  }
+  @media screen and (max-width: 900px) {
+    .home_image{
+      height: 100px;
+    }
+    
+  }

@@ -1,0 +1,209 @@
+
+.wrapper_voteform {
+  position: relative; /* Để sử dụng cho loading-container */
+  display: block;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.loading-container {
+  position: fixed; /* Giữ loading ở giữa màn hình */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999; /* Hiển thị phía trên tất cả các phần tử khác */
+  background-color: rgba(255, 255, 255, 0.9); /* Làm nền mờ */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loading-container p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Làm mờ toàn bộ trang và ngăn chặn tương tác khi loading */
+.wrapper_voteform.loading-active {
+  pointer-events: none; /* Ngăn chặn thao tác */
+  opacity: 0.5; /* Làm mờ trang */
+}
+
+
+.form-container {
+  opacity: 0.5; /* Làm mờ form khi đang tải */
+  pointer-events: none; /* Vô hiệu hóa tương tác khi loading */
+  filter: blur(2px); /* Làm mờ thêm nếu cần */
+  transition: opacity 0.3s ease, filter 0.3s ease; /* Hiệu ứng mờ dần */
+}
+
+.wrapper_voteform h1 {
+  color: #41B3A2;
+  font-weight: bold;
+}
+.wrapper_voteform form {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  display: block;
+}
+.wrapper_voteform form .header_content_form {
+  display: flex;
+  width: 100%;
+}
+.wrapper_voteform form .header_content_form .header_content_form_left {
+  width: 73%;
+  margin-right: auto;
+}
+.wrapper_voteform form .header_content_form .header_content_form_left .label {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.wrapper_voteform form .header_content_form .header_content_form_left .text_namevote {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: white;
+}
+.wrapper_voteform form .header_content_form .header_content_form_right {
+  width: 25%;
+  padding: 15px;
+  margin: auto;
+}
+.wrapper_voteform form .header_content_form .header_content_form_right .upload_area {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.wrapper_voteform form .header_content_form .header_content_form_right .upload_button {
+  height: 100%;
+  width: 100%;
+}
+.wrapper_voteform form .header_content_form .header_content_form_right img {
+  background-repeat: no-repeat;
+  margin: auto;
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  max-height: 300px;
+}
+.wrapper_voteform form .label {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
+}
+.wrapper_voteform form .text_namechoice {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: white;
+}
+.wrapper_voteform form .form_date {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+.wrapper_voteform form .form_date .date {
+  width: 50%;
+  margin-right: 10px;
+}
+
+
+.wrapper_voteform .text_description{
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #41B3A2;
+}
+.wrapper_voteform .text_description .avatar-wrapper-description{
+  width: 25%;
+  height: 250px;
+  display: flex;
+}
+.wrapper_voteform .text_description .text_description_field{
+  width: 70%;
+}
+@media screen and (max-width: 900px) {
+  .wrapper_voteform {
+    width: 100%;
+  }
+  .wrapper_voteform h1 {
+    font-size: 20px;
+  }
+  .wrapper_voteform form .header_content_form {
+    display: block;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_left {
+    width: 100%;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_left .label {
+    font-size: 15px;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_left .text_namevote {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: white;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_right {
+    width: 100%;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_right .upload_area {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_right .upload_button {
+    height: 100%;
+    width: 100%;
+  }
+  .wrapper_voteform form .header_content_form .header_content_form_right img {
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+    object-fit: cover;
+    max-height: 300px;
+    object-position: center;
+  }
+  .wrapper_voteform form .label {
+    font-size: 15px;
+  }
+  .wrapper_voteform form .text_namechoice {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: white;
+  }
+  .wrapper_voteform form .form_date {
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+  }
+  .wrapper_voteform form .form_date .textField{
+    width: 100%;
+  }
+  .wrapper_voteform form .form_date .date {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .wrapper_voteform .text_description{
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #41B3A2;
+  }
+  .wrapper_voteform .text_description{
+    display: block;
+  }
+  .wrapper_voteform .text_description .avatar-wrapper-description{
+    width: 90%;
+    margin:auto;
+    max-height: 200px;
+    margin: 0 10px 10px 0;
+  }
+  .wrapper_voteform .text_description .text_description_field{
+    width: 100%;
+  }
+}

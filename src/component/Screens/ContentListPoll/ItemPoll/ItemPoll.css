@@ -1,0 +1,89 @@
+.item {
+    border-radius: 15px;
+    width: 24%;
+    height: max-content;
+    padding: 20px;
+    margin: 5px;
+    float: left;
+    background-color: aliceblue;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.image_container {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 16/9; /* Đảm bảo tỷ lệ cố định cho hình ảnh */
+    width: 100%; /* Hình ảnh luôn vừa với container */
+}
+img {
+    display: block;
+    height: 100%; /* Đảm bảo chiều cao của hình ảnh khớp với container */
+    width: 100%; /* Đảm bảo hình ảnh lấp đầy container */
+    border-radius: 10px;
+    object-fit: cover; /* Cắt và căn chỉnh hình ảnh nếu không đúng kích thước */
+}
+.icon_container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+h3{
+    white-space: nowrap;         /* Giữ văn bản trên một dòng */
+    overflow: hidden;            /* Ẩn phần văn bản tràn ra ngoài */
+    text-overflow: ellipsis;     /* Hiển thị dấu ba chấm khi văn bản bị cắt */
+    margin: 6px 0;
+    font-weight: 700;
+}
+h4{
+    white-space: nowrap;         /* Giữ văn bản trên một dòng */
+    overflow: hidden;            /* Ẩn phần văn bản tràn ra ngoài */
+    text-overflow: ellipsis;     /* Hiển thị dấu ba chấm khi văn bản bị cắt */
+    margin: 6px 0;
+    font-weight: 450;
+}
+.item:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);    
+}
+.item .footer_itemvote {
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    border-top: 0.5px solid rgb(236, 235, 235);
+    padding-top: 5px;
+}
+.item .footer_left {
+    width: 40%;
+    overflow: hidden;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.item .footer_right {
+    width: 50%;
+    overflow: hidden;font-size: 14px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+    .item {
+        margin: 5px;
+        width: calc(50% - 10px); /* Giảm kích thước để vừa 2 item trên một hàng */
+        padding: 10px;
+        min-width: 150px; /* Giới hạn kích thước nhỏ nhất */
+    }
+    .image_container {
+        aspect-ratio: 16/9; /* Giữ tỷ lệ cố định cho container */
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

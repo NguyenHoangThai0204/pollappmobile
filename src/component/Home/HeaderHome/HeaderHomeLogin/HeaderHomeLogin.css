@@ -1,0 +1,84 @@
+.wrapper_formlogin {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.wrapper_formlogin .but_signup {
+  width: 100%;
+  height: max-content;
+  text-align: left;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: #000;
+  
+}
+.wrapper_formlogin .but_signup:hover {
+  background-color: lightblue; /* Thay đổi màu nền khi hover */
+  color: white; /* Thay đổi màu chữ khi hover */
+}
+.wrapper_formlogin .but_login {
+  width: 100%;
+  height: max-content;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.wrapper_formlogin .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.wrapper_formlogin .overlay .close {
+  position: absolute;
+  top: 0px;
+  right: 20%;
+  padding: 10px;
+  border-radius: 0 0 0 5px;
+  cursor: pointer;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
+.wrapper_formlogin .overlay .form {
+  position: absolute;
+  /* top: 3%; */
+  height: -webkit-fill-available;
+}
+.but_login::before {
+  content: "Đăng nhập";
+}
+@media screen and (max-width: 900px) {
+  .wrapper_formlogin .but_login::before {
+    content: "DN";
+  }
+  .wrapper_formlogin {
+    width: 90%; 
+    margin: 15px auto; 
+    margin-left: 10px;
+    /* width: 20%; */
+  }
+  .wrapper_formlogin .but_signup {
+    display: none;
+  }
+  .wrapper_formlogin .but_login {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    margin-left: -1px;
+  }
+  .wrapper_formlogin .overlay .close {
+    right: 0;
+    top: -18px;
+  }
+}
+

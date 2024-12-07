@@ -1,0 +1,62 @@
+
+Các file chứa socket
+StatisticsDialogPolling
+ContentDetailPoll
+UsersManagement
+InputSearchAdmin
+
+
+Dùng:
+    + TypeScript:Nó có thể tự sữa lỗi khi biên dịch mà không cần chạy chương tình.
+    + UI dùng Material ui
+    + @types/react-slick và react-slick slick-carousel để tạo hiệu ứng anomation
+  // eslint-disable-next-line
+Chọn thư mục:
+    npm create vite@latest
+Gõ 
+    y để tạo phiên bản
+Chọn lần lượt;
+    React
+    TypeScript
+Gõ:
+    npm install @mui/material @emotion/react @emotion/styled
+    npm install @fontsource/roboto
+    npm install react-slick slick-carousel
+    npm install react-toastify
+    npm i 
+    npm run dev
+    npm install date-fns // ngày tháng
+    npm install @emailjs/browser // tự động gửi mail
+
+    npm install firebase @types/firebase
+npm install react-html-parser --legacy-peer-deps
+npm install @mui/icons-material @mui/material @emotion/react @emotion/styled
+
+Tạo id duy nhất tự động:
+    npm install uuid
+Tự tạo css
+    npm install sass
+Thêm âm thanh vào:
+    npm install howler
+
+Thêm socket: 
+    sever: npm install socket.io
+    client: npm install socket.io-client
+
+sass styles.scss styles.css
+
+sass --watch styles.scss:styles.css
+
+Các sass trong quá trình chạy:
+
+sass --watch HomeLayout.scss:HomeLayout.css
+sass --watch LoginForm.scss:LoginForm.css  
+sass --watch FormLayout.scss:FormLayout.css
+sass --watch MenuLayout.scss:MenuLayout.css
+sass --watch HeaderHomeLogin.scss:HeaderHomeLogin.css
+sass --watch HeaderHomeLayout.scss:HeaderHomeLayout.css 
+sass --watch FormMenuSetting.scss:FormMenuSetting.css      
+sass --watch ContentVoteFormLayout.scss:ContentVoteFormLayout.css
+sass --watch ContentDetailPoll.scss:ContentDetailPoll.css 
+sass --watch UsersManagement.scss:UsersManagement.css
+sass --watch DetailUserManagement.scss:DetailUserManagement.css
